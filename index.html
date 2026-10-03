@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Zabit Hayat Tele — save this website for updates and new links.">
+  <title>Zabit Hayat Tele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <a class="brand" href="#">
+        <span class="brand-mark"><i></i><i></i></span>
+        <span id="siteName">Zabit Hayat Tele</span>
+      </a>
+      <div class="nav-links">
+        <a href="#posts">Updates</a>
+        <a href="#socials">Social</a>
+        
+      </div>
+      <a class="nav-button" href="#posts">Explore</a>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">WELCOME • ZABIT HAYAT TELE</span>
+        <h1>Save this website for <span>updates & new links.</span></h1>
+        <p id="siteDescription">Save the this website for updates and new links.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#posts">View Latest Links</a>
+          <a class="button secondary" href="#socials">Follow Us</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="glass glass-one"><span>NEW</span><b>LINKS</b></div>
+        <div class="glass glass-two"><span>UPDATES</span><b>08</b></div>
+        <div class="dark-tile">
+          <div class="mini-logo">ZH</div>
+          <div>
+            <strong>Stay connected</strong>
+            <small>New links & updates</small>
+          </div>
+          <div class="pulse"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="purchase-cta" id="purchase">
+      <div class="telegram-png" aria-hidden="true">
+        <img src="telegram.png" alt="">
+      </div>
+      <div class="cta-copy">
+        <span class="eyebrow">GET ACCESS</span>
+        <h2>Purchase through Telegram</h2>
+        <p id="purchaseText">Message us on Telegram to purchase or get more information.</p>
+      </div>
+      <a class="button primary cta-button" id="purchaseButton" href="#" target="_blank" rel="noopener">Purchase Now ↗</a>
+    </section>
+
+    <section class="stats">
+      <div><small>POSTS</small><strong id="postCount">08</strong></div>
+      <div><small>STATUS</small><strong>ACTIVE</strong></div>
+      <div><small>UPDATES</small><strong>NEW</strong></div>
+      <div><small>ACCESS</small><strong>24/7</strong></div>
+    </section>
+
+    <section class="section" id="posts">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">LATEST</span>
+          <h2>New links & updates</h2>
+        </div>
+        <p>Check back here whenever you want to find the latest posts.</p>
+      </div>
+      <div class="posts-grid" id="postsGrid"></div>
+    </section>
+
+    <section class="feature-section">
+      <div class="feature-copy">
+        <span class="eyebrow">ONE PLACE</span>
+        <h2>Everything important, kept simple.</h2>
+        <p>Use this page as your central hub. The admin area lets you update your eight post slots and the social usernames shown below.</p>
+        <a class="button primary" href="#admin">Open Admin Panel</a>
+      </div>
+      <div class="feature-art">
+        <div class="feature-card fc-main">
+          <span>UPDATES</span>
+          <strong>08</strong>
+          <small>Post slots ready</small>
+        </div>
+        <div class="feature-card fc-small"><b>+</b><span>NEW LINK</span></div>
+        <div class="feature-card fc-small second"><b>↗</b><span>SHARE</span></div>
+      </div>
+    </section>
+
+    <section class="social-section" id="socials">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">CONNECT</span>
+          <h2>Follow Zabit Hayat Tele</h2>
+        </div>
+        <p>Social usernames can be changed from the admin panel.</p>
+      </div>
+      <div class="social-grid" id="socialGrid"></div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Zabit Hayat Tele</span>
+      
+    </footer>
+  </main>
+
+  <div class="admin-overlay" id="adminOverlay" aria-hidden="true">
+    <div class="admin-panel">
+      <button class="close" id="closeAdmin" aria-label="Close">×</button>
+      <div id="loginView">
+        <span class="eyebrow">PRIVATE AREA</span>
+        <h2>Admin Panel</h2>
+        <p>Enter your admin password to manage the website.</p>
+        <input id="adminPassword" type="password" placeholder="Admin password">
+        <button class="button primary full" id="loginBtn">Login</button>
+        <small class="hint">Default password: <b>zabit123</b> — change it after login.</small>
+      </div>
+
+      <div id="editorView" class="hidden">
+        <div class="admin-top">
+          <div>
+            <span class="eyebrow">CONTROL CENTER</span>
+            <h2>Manage website</h2>
+          </div>
+          <button class="button secondary" id="logoutBtn">Logout</button>
+        </div>
+
+        <div class="admin-block">
+          <h3>Website settings</h3>
+          <label>Website name<input id="editSiteName"></label>
+          <label>Small description<textarea id="editDescription" rows="2"></textarea></label>
+          <label>Admin password<input id="editPassword" type="password"></label>
+        </div>
+
+        <div class="admin-block">
+          <div class="block-title">
+            <h3>8 posts</h3><span>Title + description + link</span>
+          </div>
+          <div id="postEditors"></div>
+        </div>
+
+
+        <div class="admin-block">
+          <h3>Purchase CTA</h3>
+          <label>CTA title<input id="editPurchaseTitle"></label>
+          <label>CTA description<textarea id="editPurchaseDescription" rows="2"></textarea></label>
+          <label>Purchase link<input id="editPurchaseLink" placeholder="https://t.me/yourusername"></label>
+          <label>Telegram PNG filename<input id="editTelegramImage" placeholder="telegram.png"></label>
+        </div>
+
+        <div class="admin-block">
+          <h3>Social media usernames / links</h3>
+          <div class="social-editors" id="socialEditors"></div>
+        </div>
+
+        <div class="save-row">
+          <button class="button primary" id="saveBtn">Save Changes</button>
+          <button class="button secondary" id="resetBtn">Reset Demo Data</button>
+        </div>
+        <p class="storage-note">This GitHub-only version saves admin changes in this browser using localStorage. For changes to appear for every visitor/device, connect the same UI to a database such as Supabase or Firebase.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin is available only at the special URL: /#zht-admin -->\n  <script src="script.js"></script>
+</body>
+</html>
